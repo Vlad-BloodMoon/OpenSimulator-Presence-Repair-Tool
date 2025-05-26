@@ -33,7 +33,7 @@ php repair_ghosts.php
 ### Automatic via cron (example: run every hour):
 
 ```bash
-0 * * * * /usr/bin/php /var/www/BloodMoon/presence/repair_ghosts.php >> /dev/null 2>&1
+0 * * * * /usr/bin/php /path/to/repair_ghosts.php >> /dev/null 2>&1
 ```
 
 ### Log Rotation
