@@ -1,0 +1,8 @@
+# Disable directory listing
+Options -Indexes
+
+# Protect log file
+<Files "repair_ghosts.log">
+    Order allow,deny
+    Deny from all
+</Files>
