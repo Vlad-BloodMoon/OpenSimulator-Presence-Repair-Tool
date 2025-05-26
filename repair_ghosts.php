@@ -1,11 +1,13 @@
 <?php
-$host = 'localhost';
-$db   = 'robust';
-$user = 'your_mysql_user';
-$pass = 'your_mysql_password';
+$config = require __DIR__ . '/config.php';
+
+$host = $config['db_host'];
+$db   = $config['db_name'];
+$user = $config['db_user'];
+$pass = $config['db_pass'];
+$logfile = $config['log_path'];
 $charset = 'utf8mb4';
 
-$logfile = __DIR__ . '/repair_ghosts.log';
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -61,9 +63,8 @@ try {
         append_log($logfile, $log);
     }
 
-} catch (\PDOException $e) {
+} catch (PDOException $e) {
     $log = "Error: " . $e->getMessage();
     echo $log . "\n";
     append_log($logfile, $log);
 }
-?>
