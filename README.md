@@ -1,3 +1,5 @@
+🇫🇷 Lire en français : [README.fr.md](README.fr.md)
+
 # OpenSimulator Presence Repair Tool
 
 This small utility automatically cleans up "ghosted" avatar sessions from OpenSimulator grids — especially helpful when users crash or disconnect improperly, and their status remains stuck as online in the database.
