@@ -12,6 +12,7 @@ This small utility automatically cleans up "ghosted" avatar sessions from OpenSi
 ## 📂 Files Included
 
 - `repair_ghosts.php`: The main script to repair ghost avatars
+- `config.php` – Database and log file configuration
 - `repair_ghosts.log`: The auto-managed log file (rotated to keep only the last 100 entries)
 - `.htaccess`: Prevents public access and listing of files in the `/presence` folder
 
